@@ -20,6 +20,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
 });
 
 //work on the Routs
+require("./routes/apiroute")(app);
+require("./routes/viewroute")(app);
 
 app.listen(PORT, () => {
     console.log(`Running on port ${PORT}!!!`);
